@@ -1,6 +1,6 @@
 # FractalViewer
 
-Simple program capable of visualizing Mandelbrot set and Sierpinski triangle. Made a an small hobby project.
+Simple program capable of visualizing Mandelbrot set and Sierpinski triangle. Made as a small hobby project.
 
 
 ## Prerequisites
