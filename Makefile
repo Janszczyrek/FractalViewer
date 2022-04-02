@@ -1,5 +1,6 @@
 COMPILER = g++
 LINKER = $(COMPILER)
+DIR = $(notdir $(CURDIR))
 CFLAGS = -Wall -lsfml-graphics -lsfml-window -lsfml-system -O
 LFLAGS = -Wall -lsfml-graphics -lsfml-window -lsfml-system -O
 
@@ -17,3 +18,9 @@ object/sierpinski.o: source/sierpinski.cpp headers/sierpinski.hpp
 object/sierpinski_draw.o: source/sierpinski_draw.cpp headers/sierpinski_draw.hpp
 	$(COMPILER) -c source/sierpinski_draw.cpp $(CFLAGS) -o object/sierpinski_draw.o
 all: mandelbrot.out sierpinski.out
+
+.PHONY: clean tar
+clean:
+	rm *.out object/*
+tar: clean
+	(cd ../; tar -cvzf $(DIR).tar.gz  $(DIR) )

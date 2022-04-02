@@ -7,5 +7,5 @@
 #include <math.h>
 #define WIDTH 100.f
 #define HEIGHT 100.f
-#define SCALE 5
+#define SCALE 10
 #endif
